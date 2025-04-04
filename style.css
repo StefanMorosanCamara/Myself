@@ -40,3 +40,36 @@ footer {
     font-size: 0.9rem;
     opacity: 0.7;
 }
+/* Estilos generales del carrusel */
+.carousel {
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 40px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Contenedor de las imágenes */
+.carousel-container {
+    display: flex;
+    width: 400%;
+    animation: scroll 12s infinite linear;
+}
+
+/* Estilos de las imágenes */
+.carousel img {
+    width: 100%;
+    flex: 1;
+}
+
+/* Animación de desplazamiento */
+@keyframes scroll {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
