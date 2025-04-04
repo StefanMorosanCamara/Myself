@@ -49,27 +49,48 @@ footer {
     margin: 40px auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Contenedor de las imágenes */
 .carousel-container {
     display: flex;
-    width: 400%;
-    animation: scroll 12s infinite linear;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Estilos de las imágenes */
 .carousel img {
     width: 100%;
-    flex: 1;
+    flex-shrink: 0;
 }
 
-/* Animación de desplazamiento */
-@keyframes scroll {
-    0% { transform: translateX(0%); }
-    25% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
-    100% { transform: translateX(0%); }
+/* Botones de navegación */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
